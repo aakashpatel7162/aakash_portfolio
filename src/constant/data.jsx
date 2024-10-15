@@ -85,8 +85,7 @@ const data = {
   },
   overviewPage: {
     content:
-      "Passionate Front-End Software Developer with experience in building responsive, user-centric web applications. Proficient in modernJavaScript frameworks such as React.js and Node.js, with a strong emphasis on writing clean, maintainable code and optimizingperformance. Adept at translating UI/UX designs into high-quality code while ensuring cross-browser compatibility and adherence toaccessibility standards.",
-  },
+      "Passionate Front-End Software Developer with experience in building responsive, user-centric web applications. Proficient in modernJavaScript frameworks such as React.js and Node.js, with a strong emphasis on writing clean, maintainable code and optimizingperformance. Adept at translating UI/UX designs into high-quality code while ensuring cross-browser compatibility and adherence toaccessibility standards.",},
   experiencePage: {
     content:
       "Passionate Front-End Software Developer with experience in building responsive, user-centric web applications. Proficient in modernJavaScript frameworks such as React.js and Node.js, with a strong emphasis on writing clean, maintainable code and optimizingperformance. Adept at translating UI/UX designs into high-quality code while ensuring cross-browser compatibility and adherence toaccessibility standards.",
