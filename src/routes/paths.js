@@ -1,6 +1,8 @@
 const paths={
-    home:"home",
+    home:"/",
     about:"about",
-    experience:"experience"
+    experience:"experience",
+    contact:"contact"
     
 }
+export default paths

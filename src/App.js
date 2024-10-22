@@ -1,10 +1,9 @@
 import './App.css';
-import Home from '../src/main/Home'
+import RouterProvider from './routes/RouteProvider'
 function App() {
   return (
     <div className="App">
-      
-      <Home/>
+      <RouterProvider/>
 
     </div>
   );

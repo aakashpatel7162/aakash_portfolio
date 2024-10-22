@@ -1,47 +1,124 @@
-.left_bar {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background-color: #f9f9f9; 
-    width: 250px; 
-    border-right: 1px solid #ddd; 
+/* layout.style.css */
+
+/* General layout */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: all 0.3s ease;
 }
 
-.patient {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 15px; 
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    transition: background-color 0.3s; 
-    cursor: pointer; 
-}
-.patient:hover {
-    background-color: #eaeaea; 
+.layout.sidebar-open .content {
+  margin-left: 250px; /* Adjust margin for sidebar */
 }
 
-.img {
-    border-radius: 50%; 
-    width: 50px; 
-    height: 50px;
-    margin-right: 15px; 
+.content {
+  flex-grow: 1;
+  /* padding: 20px; */
+  transition: margin-left 0.3s ease;
 }
 
-.patient > div {
-    flex-grow: 1;
+.layout {
+  display: flex;
 }
 
-.patient div:first-child {
-    font-weight: bold; 
-    font-size: 16px; 
+.content {
+  flex: 1; /* Allow the content area to take remaining space */
 }
 
-.patient div:last-child {
-    font-size: 14px; 
-    color: #666;
+
+
+
+/*--------Header---------*/
+.header_main {
+  position: fixed; /* Fix the header at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #343a40; /* Background color */
+  padding: 10px 15px;
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  align-items: center;
+  z-index: 1000; /* Ensure it is above other content */
 }
 
-.patient span {
-    margin-right: 10px; 
+.center_nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav_link {
+  margin: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav_link:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Add padding to the top of the content to prevent overlap */
+.content {
+  padding-top: 60px; /* Adjust according to the height of your header */
+}
+
+.header_main.expanded {
+  margin-left: 190px;
+}
+
+.logo_image {
+  height: 40px; /* Adjust logo size to match new layout */
+}
+
+.center_nav {
+  display: flex;
+  align-items: center;
+}
+
+/* YourStyles.css */
+/* YourStyles.css */
+.nav_link {
+  padding: 10px 15px;
+  color: white; /* Default white text for navigation links */
+  margin: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav_link:hover {
+  color: red; /* Bright blue color on hover */
+}
+
+.active {
+  animation: pulse 1s infinite; /* Pulse animation */
+  color: #007bff; /* Ensure color is set to blue during pulse */
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4); /* Increased scale for pronounced pulse */
+  }
+}
+
+
+
+.profile_section {
+  display: flex;
+  align-items: center;
+}
+
+.profile_image {
+  border-radius: 50%; /* Circular image */
+  width: 40px; /* Consistent size */
+  height: 40px; /* Consistent size */
+}
+
+.profile_info span {
+  margin: 0;
+  color: white; /* White text for profile name */
 }
