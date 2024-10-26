@@ -10,7 +10,7 @@ const data = {
 
      profile:{
       name:"Aakash Patel",
-      occupation:"Software Develoepr",
+      occupation:"Software Developer",
       img: IMAGES.my_image,
      },
      expertList: [
@@ -110,16 +110,26 @@ key:"I am constantly exploring new technologies and methodologies to improve my 
  experienceData : [
   {
     role:"Frontend Development Specialist",
-    description:" Built a scalable Front- end architecture using React.js, to handle high traffic and data sets. Designed a responsive and mobile-first front-end using React and Material-UI, resulting in a increase in mobiletraffic. Implemented RESTful APIs to allow seamless communication between the front-end and the back-end services."
+    org:"Actual Pixel",
+    description:" Built a scalable Front- end architecture using React.js, to handle high traffic and data sets. Designed a responsive and mobile-first front-end using React and Material-UI, resulting in a increase in mobile traffic. Implemented RESTful APIs to allow seamless communication between the front-end and the back-end services."
+  },
+  {
+    role:"Software Developer",
+    org:"Actual Pixel",
+    description:"Served as a key front-end resource across multiple projects, successfully implementing critical features,improving UI/UX, and optimizing performance, while collaborating closely with teams to deliver impactful, high- quality solutions using React, Node and modern web technologies"
   },
   {
     role: "Service Associate",
+    org:"Taleperformance",
     description: "Expert I led the operations of a high- performing eCommerce website, managing a team of 12 members. I strategically assigned tasks, collaborated with the tech team, and worked closely with clients to deliver tailored solutions, driving business growth and optimizing product performance across the platform."
   },
   {
-    role: "Profile 3: DevOps Engineer",
-    description: "Managed Docker containers and CI/CD pipelines to streamline deployment processes. Experienced in using Git for version control and collaboration.",
+    role: "Side Engineer Intern",
+    org: "Reliance Digital",
+    description: "Delivered 1FT demos and technical presentations explaining internet architecture, protocols, and network configurations. Led the end-to-end setup and integration of internet services, ensuring optimized performance and reliable connectivity in enterprise environments.",
   },
+  
+  
 ],
 
 

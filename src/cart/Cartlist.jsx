@@ -6,7 +6,7 @@ import { FrameContext } from "./FrameProvider"; // Ensure the context is importe
 
 const CartList = ({ onClose }) => {
   const [clickedItemId, setClickedItemId] = useState(null);
-  const { toggleFrame, setClickFrameIs } = useContext(FrameContext); // Access the toggleFrame function from context
+  const { toggleFrame, setClickFrameIs, } = useContext(FrameContext); // Access the toggleFrame function from context
 
   const handleItemClick = (item) => {
     if (clickedItemId === item.id) {
