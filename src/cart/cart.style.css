@@ -2,82 +2,83 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 17rem;
+  width: 17rem; /* Keep this width consistent */
   height: 100%;
   border-right: 1px solid #343a40;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
   z-index: 1000;
+  overflow-y: auto;
   box-sizing: border-box;
   background-color: #333333;
-  display: flex;
-  flex-direction: column;
+
 }
 
-.cart::-webkit-scrollbar {
-  display: none;
-}
-
-/* Header fixed at the top inside the cart */
-.header_menubar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #343a40;
-  height: 85px;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  position: sticky;
-  top: 0;
-  z-index: 1; /* Ensures it stays above the scrollable content */
+  .cart::-webkit-scrollbar{
+    display: none;
+  }
+  .header_menubar {
+    display: flex;
+    justify-content: space-between; /* Aligns title and button on opposite ends */
+    align-items: center; /* Vertically centers items */
+    background-color: #343a40; /* Dark background color */
+    height: 60px; /* Consistent height for the header */
+    width: 100%; /* Set to 100% to take full width of the cart */
+    box-sizing: border-box; /* Ensure padding and border are included in total width */
+    padding: 0 10px; /* Optional: add padding for spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 .header-title {
-  font-size: 20px;
-  color: #ffffff;
-  margin: 0;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
+    font-size: 20px; /* Slightly smaller font size for the title */
+    color: #ffffff; /* Light color for the title text */
+    margin: 0; /* Remove default margin */
+    letter-spacing: 0.5px; /* Slight spacing for readability */
+    white-space: nowrap;;
 }
 
 .close-button {
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+    color: #ffffff; /* White text color */
+    border: none; /* Remove default button border */
+    border-radius: 4px; /* Smaller border radius */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
 }
 
 .close-button:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
 }
 
 .close-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Subtle focus effect */
 }
 
-/* Scrollable cart-list area */
-.cart-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  margin: 10px 18px;
-  overflow-y: auto;
-  flex-grow: 1;
-}
+  /* Responsive styles */
+ 
+  
+  /* Adjusted styles for the cart items */
+  .cart-item {
+    margin-bottom: 8px; /* More compact spacing */
+  }
+  
+  .cart-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: 10px 18px 10px 18px;
 
-.cart-list::-webkit-scrollbar {
-  display: none;
-}
+    
+    
+  }
 
+
+  
   .cart-item-image {
     width: 60px; /* Increased width for larger icons */
     height: 60px; /* Increased height for larger icons */
@@ -104,6 +105,7 @@
     margin-top: 20px; /* Add space above empty message */
   }
 
+
   .cart-item-box {
     display: flex;
     align-items: center;
@@ -116,31 +118,43 @@
     overflow: hidden; /* Prevent overflow of the animation */
     transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s; /* Smooth transitions */
     background-color: #ffffff;
-    cursor: pointer;
-    column-gap: 1rem;
-}
 
-.cart-item-box.clicked {
-    box-shadow: 0 8px 20px rgba(0, 77, 64, 0.5); /* Stronger shadow */
-    border: 3px solid red;
-}
-
-/* Pseudo-element for the gradient dotted border */
-.cart-item-box.clicked::before {
-    content: "";
+  }
+  
+  .cart-item-box.clicked {
+    background-color: #b2e0d0; /* More pronounced light teal background */
+    border-color: #004d40; /* Darker border color for better visibility */
+    box-shadow: 0 8px 20px rgba(0, 77, 64, 0.5); /* Stronger shadow for depth */
+  }
+  
+  .cart-item-box:hover {
+    transform: translateY(-4px); /* Slightly stronger hover effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+  }
+  
+  .cart-item-box::before {
+    content: ''; /* Creates a pseudo-element for the running effect */
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: inherit; /* Inherit the border radius */
-    border: 2px solid transparent; /* Transparent border to maintain layout */
-    background: linear-gradient(135deg, red, blue); /* Gradient background */
-    padding: 2px; /* Space for the border effect */
-    z-index: -1; /* Ensure it sits behind the content */
-    mask: radial-gradient(circle, transparent 0%, transparent 10%, white 10%, white 100%); /* Create the dotted effect */
-}
-
+    top: 0; /* Positioning for the top of the box */
+    left: 0; /* Positioning for the left of the box */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    border: 2px solid transparent; /* Start with transparent */
+    border-radius: 10px; /* Match corners */
+    animation: runningBorder 2s linear forwards; /* Running animation */
+    animation-play-state: paused; /* Pause the animation initially */
+    pointer-events: none; /* Prevent interaction with the pseudo-element */
+  }
+  
+  .cart-item-box::before {
+    /* ... existing styles ... */
+  }
+  
+  .cart-item-box:hover::before,
+  .cart-item-box.clicked::before {
+    animation-play-state: running; /* Resume animation on hover or click */
+  }
+  
   /* Existing keyframes for the running effect... */
   
   
