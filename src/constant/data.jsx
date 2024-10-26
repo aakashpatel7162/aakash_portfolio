@@ -1,9 +1,11 @@
 import IMAGES from "../assets/images";
-import { SiGit, SiNodejs, SiReact, SiExpress, SiMongodb, SiMysql, SiDocker } from 'react-icons/si';
-import { FaNodeJs } from 'react-icons/fa'; // Import from Font Awesome
+import { SiGit, SiReact, SiExpress, SiMongodb, SiMysql, SiDocker } from 'react-icons/si';
+import { FaNodeJs } from 'react-icons/fa';
+
 
 const data = {
-  header_list: ["Home", "Experience", "About", "Contact"],
+  header_list: ["Home", "Experience", "Overview", "Contact"],
+  // my_resume:my_resume,
 
 
      profile:{
@@ -21,7 +23,7 @@ const data = {
         expertise: "React Expert",
         img: IMAGES.my_image,
         exp: "3 year",
-        icon: <SiReact size={30} /> // Binding React Icon
+        icon: <SiReact size={45} /> // Binding React Icon
       }, {
         id: "2",
         name: "Aakash Patel",
@@ -31,7 +33,7 @@ const data = {
         expertise: "Node Specialist",
         img: IMAGES.my_image,
         exp: "3 year",
-        icon: <FaNodeJs size={30} /> // Binding Node.js Icon
+        icon: <FaNodeJs size={45} /> // Binding Node.js Icon
       },
       {
         id: "3",
@@ -42,7 +44,7 @@ const data = {
         expertise: "Express Developer",
         img: IMAGES.my_image,
         exp: "3 year",
-        icon: <SiExpress size={30} /> // Binding Express Icon
+        icon: <SiExpress size={45} /> // Binding Express Icon
       },
       {
         id: "4",
@@ -53,7 +55,7 @@ const data = {
         expertise: "Git Explorer",
         img: IMAGES.my_image,
         exp: "3 year",
-        icon: <SiGit size={30} /> // Binding Git Icon
+        icon: <SiGit size={45} /> // Binding Git Icon
       },
      
       
@@ -66,7 +68,7 @@ const data = {
         expertise: "MySQL Specialist",
         img: IMAGES.my_image,
         exp: "3 year",
-        icon: <SiMysql size={30} /> // Binding MySQL Icon
+        icon: <SiMysql size={45} /> // Binding MySQL Icon
       },
       {
         id: "6",
@@ -77,7 +79,7 @@ const data = {
         expertise: "Mongo Enthusiast",
         img: IMAGES.my_image,
         exp: "3 year",
-        icon: <SiMongodb size={30} /> // Binding Docker Icon
+        icon: <SiMongodb size={45} /> // Binding Docker Icon
       },
       {
         id: "7",
@@ -88,7 +90,7 @@ const data = {
         expertise: "Docker Enthusiast",
         img: IMAGES.my_image,
         exp: "3 year",
-        icon: <SiDocker size={30} /> // Binding Docker Icon
+        icon: <SiDocker size={45} /> // Binding Docker Icon
       },
     ],
   aboutUsPage:{
@@ -134,118 +136,162 @@ key:"I am constantly exploring new technologies and methodologies to improve my 
     content:
       "Passionate Front-End Software Developer with experience in building responsive, user-centric web applications. Proficient in modernJavaScript frameworks such as React.js and Node.js, with a strong emphasis on writing clean, maintainable code and optimizingperformance. Adept at translating UI/UX designs into high-quality code while ensuring cross-browser compatibility and adherence toaccessibility standards.",
   },
-   skillSets: [
+  skillSets: [
     {
-      name: "React.js",
-      description: "React is a JavaScript library for building user interfaces.",
-      strengths: [
-        "Component-based architecture",
-        "Efficient and fast rendering with Virtual DOM",
-        "Widely used for building dynamic and interactive web apps"
-      ],
-      deepPoints: [
-        "Supports unidirectional data flow and state management",
-        "Strong community support and ecosystem (Redux, React Router, etc.)",
-        "Hooks API for functional components and advanced features"
-      ],        img: IMAGES.my_image,
-
+        name: "React.js",
+        description: "A powerful JavaScript library for building responsive, dynamic user interfaces.",
+        strengths: [
+            "Component-based architecture for modular code structure",
+            "Efficient and fast rendering with Virtual DOM",
+            "Rich ecosystem with reusable libraries and tools",
+            "Supports unidirectional data flow and state management for predictable UI behavior",
+        ],
+        deepPoints: [
+            "Strong community support with extensive resources (Redux, React Router, etc.)",
+            "Optimized for mobile and web with reusable components",
+            "Seamless integration with server-side rendering frameworks"
+        ],
+        offerings: [
+            "Custom React component development",
+            "Single-page application (SPA) architecture",
+            "State management solutions (Redux, Context API)",
+            "Advanced hooks (useMemo, useCallback) for performance",
+            "UI performance optimization techniques"
+        ],
+        img: IMAGES.my_image,
     },
     {
-      name: "Node.js",
-      description: "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
-      strengths: [
-        "Event-driven, non-blocking I/O model",
-        "Highly scalable and efficient for handling multiple connections",
-        "Great for building real-time applications"
-      ],
-      deepPoints: [
-        "Supports server-side scripting, making it easy to build RESTful APIs",
-        "Large ecosystem of open-source libraries and packages (npm)",
-        "Can handle asynchronous programming with promises and async/await"
-      ],
-    img: IMAGES.my_image,
-
+        name: "Node.js",
+        description: "An efficient JavaScript runtime built on Chrome's V8 engine for server-side applications.",
+        strengths: [
+            "Event-driven, non-blocking I/O for asynchronous operations",
+            "Highly scalable architecture suited for high-traffic applications",
+            "Strong ecosystem (npm) supporting real-time applications and integrations"
+        ],
+        deepPoints: [
+            "Robust for server-side scripting and RESTful APIs",
+            "Supports asynchronous programming (promises, async/await)",
+            "Large, active community with extensive library support"
+        ],
+        offerings: [
+            "Scalable RESTful API development",
+            "Real-time data processing applications",
+            "Microservices architecture",
+            "Database integration (MongoDB, MySQL)",
+            "Implementation of efficient async patterns"
+        ],
+        img: IMAGES.my_image,
     },
     {
-      name: "Express.js",
-      description: "Express.js is a fast, unopinionated, and minimalist web framework for Node.js.",
-      strengths: [
-        "Lightweight and flexible framework for building web applications",
-        "Supports middleware for handling requests and responses",
-        "Easy to integrate with other Node.js libraries"
-      ],
-      deepPoints: [
-        "Commonly used for building RESTful APIs and backend services",
-        "Supports routing, templating, and more",
-        "Works well with database systems like MongoDB and MySQL"
-      ],        img: IMAGES.my_image,
-
+        name: "Express.js",
+        description: "A minimalist web framework for Node.js, enabling robust server-side applications.",
+        strengths: [
+            "Lightweight and fast for efficient request handling",
+            "Middleware support for extensible functionality",
+            "Comprehensive routing and request/response handling"
+        ],
+        deepPoints: [
+            "Widely used for RESTful API development",
+            "Supports templating, static file serving, and middleware integration",
+            "Compatible with various database systems like MongoDB and MySQL"
+        ],
+        offerings: [
+            "Middleware implementation for modular architecture",
+            "API endpoint creation with error handling",
+            "Integration with templating engines (e.g., EJS, Pug)",
+            "Advanced logging and request tracking solutions"
+        ],
+        img: IMAGES.my_image,
     },
     {
-      name: "Git",
-      description: "Git is a distributed version control system for tracking changes in source code during software development.",
-      strengths: [
-          "Supports distributed development, allowing multiple developers to work on the same project simultaneously",
-          "Efficiently handles large projects with speed and flexibility",
-          "Provides robust branching and merging capabilities"
-      ],
-      deepPoints: [
-          "Enables easy collaboration and code sharing through repositories (e.g., GitHub, GitLab)",
-          "Facilitates easy tracking of changes and history, allowing for rollback if needed",
-          "Integrates with various CI/CD tools for automated workflows and deployments"
-      ],
-      img: IMAGES.git_image, // Replace with the actual image for Git
-  },
-  
-    {
-      name: "MySQL",
-      description: "MySQL is an open-source relational database management system.",
-      strengths: [
-        "Widely used and well-documented relational database",
-        "Supports complex queries, joins, and indexing",
-        "Reliable performance with ACID compliance"
-      ],
-      deepPoints: [
-        "Ideal for structured data and relational schemas",
-        "Scalable for small to large applications",
-        "Integration with various backend languages like Node.js, PHP, etc."
-      ],        img: IMAGES.my_image,
-
+        name: "Git",
+        description: "A distributed version control system crucial for collaborative software development.",
+        strengths: [
+            "Facilitates distributed development with robust branching and merging",
+            "Supports collaboration through multiple repository hosting services",
+            "Efficiently manages project history with rollback capabilities"
+        ],
+        deepPoints: [
+            "Enables easy code sharing and collaboration (e.g., GitHub, GitLab)",
+            "Tracks changes for seamless history and version control",
+            "Integrates with CI/CD pipelines for streamlined deployments"
+        ],
+        offerings: [
+            "Setup and management of version control workflows",
+            "Branching strategies and best practices",
+            "Collaboration and code review processes",
+            "CI/CD integration and automation",
+            "Code quality and release management"
+        ],
+        img: IMAGES.git_image,
     },
-   
     {
-      name: "Docker",
-      description: "Docker is a platform for developing, shipping, and running applications in containers.",
-      strengths: [
-        "Enables consistent environments across development, testing, and production",
-        "Lightweight and efficient compared to virtual machines",
-        "Large ecosystem of prebuilt images (Docker Hub)"
-      ],
-      deepPoints: [
-        "Supports microservices architecture with isolated containers",
-        "Easily integrates with CI/CD pipelines for automated deployment",
-        "Docker Compose for managing multi-container applications"
-      ],        img: IMAGES.my_image,
-
+        name: "MySQL",
+        description: "A reliable and high-performance relational database system.",
+        strengths: [
+            "ACID-compliant for reliable transaction handling",
+            "Supports complex queries, joins, and indexing",
+            "Widely used and documented with high availability"
+        ],
+        deepPoints: [
+            "Ideal for structured data and large-scale applications",
+            "Scalable for both small and large deployments",
+            "Seamless integration with backend languages like Node.js, PHP"
+        ],
+        offerings: [
+            "Database schema design and optimization",
+            "Complex query development for efficient data access",
+            "Data migration and backup strategies",
+            "Performance tuning, indexing, and query optimization"
+        ],
+        img: IMAGES.my_image,
     },
-    
     {
-      name: "MongoDB",
-      description: "MongoDB is a NoSQL, document-oriented database designed for scalability and flexibility.",
-      strengths: [
-        "Schema-less structure, allowing for flexibility in data modeling",
-        "Highly scalable with built-in horizontal scaling (sharding)",
-        "Supports large volumes of unstructured or semi-structured data"
-      ],img: IMAGES.my_image,
+        name: "MongoDB",
+        description: "A NoSQL database providing flexibility with a document-oriented model.",
+        strengths: [
+            "Schema-less, supporting flexible data structures",
+            "Built for high scalability with sharding support",
+            "Efficient for large volumes of unstructured or semi-structured data"
+        ],
+        deepPoints: [
+            "Ideal for real-time analytics, content management, and IoT",
+            "BSON format for flexible nested data storage",
+            "Seamless integration with JavaScript environments like Node.js"
+        ],
+        offerings: [
+            "Schema design tailored for dynamic data models",
+            "Real-time data analytics solutions",
+            "Application integration and optimization",
+            "Advanced indexing and query optimization"
+        ],
+        img: IMAGES.my_image,
+    },
+    {
+        name: "Docker",
+        description: "A platform for containerizing applications, ensuring consistency across environments.",
+        strengths: [
+            "Lightweight compared to virtual machines, ensuring efficient resource usage",
+            "Supports consistent development, testing, and production environments",
+            "Ecosystem includes Docker Hub with prebuilt images"
+        ],
+        deepPoints: [
+            "Enables isolated environments ideal for microservices",
+            "Facilitates rapid development with Docker Compose",
+            "Integrates smoothly with CI/CD for automated deployment"
+        ],
+        offerings: [
+            "Application containerization for cross-environment consistency",
+            "Setup of scalable microservices architecture",
+            "CI/CD pipeline integration",
+            "Multi-container management with Docker Compose",
+            "Optimization for resource-efficient deployments"
+        ],
+        img: IMAGES.my_image,
+    },
+]
 
-      deepPoints: [
-        "Great for real-time analytics, content management, and IoT applications",
-        "Uses BSON format, which is JSON-like and allows for nested data",
-        "Strong integration with JavaScript environments like Node.js"
-      ]
-    }
-    
-  ],
+
   
 };
 

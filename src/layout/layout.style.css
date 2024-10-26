@@ -91,7 +91,7 @@
   color: red; /* Bright blue color on hover */
 }
 
-.active {
+.active_nav_ink {
   animation: pulse 1s infinite; /* Pulse animation */
   color: #007bff; /* Ensure color is set to blue during pulse */
 }

@@ -9,7 +9,7 @@ import { FrameContext } from '../cart/FrameProvider'; // Import FrameContext for
 export default function Header({ toggleSidebar, menuBar }) {
   const sidebarRef = useRef(null);  // Create a ref for the sidebar
   const { profile } = data;  // Destructure profile from data
-  const { contactInfo } = useContext(FrameContext); // Access contact data from FrameContext
+  const { contactInfo, setFrameVisible } = useContext(FrameContext); // Access contact data from FrameContext
 
   const [activeIndex, setActiveIndex] = useState(0); // Initialize to the first link
 
@@ -131,7 +131,7 @@ export default function Header({ toggleSidebar, menuBar }) {
 
       <div className="center_nav" style={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
         {data.header_list.map((text, index) => (
-          <div key={index}          className={`nav_link ${activeIndex === index ? 'active' : ''}`} 
+          <div key={index}          className={`nav_link ${activeIndex === index ? 'active_nav_ink' : ''}`} 
           
           // Apply 'active' class conditionally
           onMouseOver={e => e.currentTarget.style.color = 'red'} onMouseOut={e => e.currentTarget.style.color = ''} onClick={()=>handleScroll(index)}>
