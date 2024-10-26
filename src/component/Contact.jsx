@@ -61,7 +61,7 @@ export default function Contact() {
   }, [contactInfo]);
       return (
     <div className="contact-form-container">
-      <span className=' header'>Get in Touch</span>
+      <span className='form-header'>Get In Touch</span>
       <form onSubmit={handleSubmit} className="contact-form">
         
         <div className="form-group">
@@ -114,10 +114,9 @@ export default function Contact() {
         </div>
 
         <button type="submit" className="submit-button">Send Message</button>
-        <div className='connect-connecter'>
-     <a href="mailto:aakashpatel7162@gmail.com">Or you can mail us directly <span class="highlight">here</span></a>
+        <div class="connect-connecter">
+    <a href="mailto:aakashpatel7162@gmail.com">Or you can mail us directly <span class="highlight">here</span></a>
 </div>
-
    </form>
     </div>
   );

@@ -5,7 +5,6 @@ import IMAGES from '../assets/images'
 import { SiGithub } from 'react-icons/si';
 import { AiFillLinkedin } from 'react-icons/ai'; 
 import { AiOutlineDownload } from 'react-icons/ai'; // Download icon
-
 const About = () => {
   const { aboutUsPage } = data;
 
@@ -27,13 +26,13 @@ const About = () => {
      
 
     <a href={IMAGES.my_resume} download="aakash_resume.pdf" style={{textDecoration:"none"}}>
-  <button className="resume-btn">   <AiOutlineDownload  size={22}/>Resume</button>
+  <button className="resume-btn">   <AiOutlineDownload  size={20}/>Resume</button>
 </a>
-      <a href="https://www.linkedin.com/in/aakash-patel-9b24531a2/" target="_blank" rel="noopener noreferrer"  className="social_icon" style={{color:"#0A66C8"}}>
+      <a href="https://www.linkedin.com/in/aakash-patel-9b24531a2/" target="_blank" rel="noopener noreferrer"  className="social_icons" style={{color:"#0A66C8"}}>
       
         <AiFillLinkedin  size={25} />
       </a>
-      <a href="https://github.com/aakashpatel7162" target="_blank" rel="noopener noreferrer " className="social_icon">
+      <a href="https://github.com/aakashpatel7162" target="_blank" rel="noopener noreferrer " className="social_icons" style={{color:"black"}}>
       <SiGithub size={25} />
       </a>
     </div>

@@ -13,11 +13,11 @@ const Frame = () => {
   return (
     <div className="frame-container">
       <div className="frame-content">
-        <span className="frame-name">{currentCartItem.name}</span>
-        <span className="frame-type">{currentCartItem.description}</span>
+        <h4 className="frame-name">{currentCartItem.name}</h4>
+        <h5 className="frame-type">{currentCartItem.description}</h5>
 
         <div className="frame-skills">
-          <span className="title">Feature:</span>
+          <h6>Feature:</h6>
           <ul>
             {currentCartItem.strengths?.map((skill, index) => (
               <li key={index} className="frame-skill-item">{skill}</li>
