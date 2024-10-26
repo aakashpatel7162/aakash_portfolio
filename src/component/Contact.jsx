@@ -31,14 +31,28 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    // Process formData, e.g., send to a server or log it
-    console.log(formData);
+    alert("You data is recorded , we will contact u shortly")
+    setFormData({})
+   
+
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzkMqTgAcY2EfUvPMyoyB26Gh6rBdP7g5Yf0dtrka6_5hz7u7NeF7rbxMZk7IRUCcfCaQ', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: new URLSearchParams(formData),
+      });
+      console.log(response,'response')
+      alert('Form submitted successfully!');
+    } catch (error) {
+      console.error('Error:', error);
+      alert('There was a problem submitting your form.');
+    }
   };
   const nameInputRef = useRef(null);
 
-  // Automatically focus on the name field when the component is rendered
   useEffect(() => {
     if (nameInputRef.current) {
       nameInputRef.current.focus();  // Focus on the name input
@@ -46,7 +60,7 @@ export default function Contact() {
   }, [contactInfo]);
       return (
     <div className="contact-form-container">
-      <h2>Get in Touch</h2>
+      <span className=' header'>Get in Touch</span>
       <form onSubmit={handleSubmit} className="contact-form">
         
         <div className="form-group">
@@ -99,8 +113,8 @@ export default function Contact() {
         </div>
 
         <button type="submit" className="submit-button">Send Message</button>
-        <div style={{marginTop:"1rem"}}>
-  <a href="mailto:aakashpatel7162@gmail.com">Or you can mail us directly <span class="highlight">here</span></a>
+        <div className='connect-connecter'>
+     <a href="mailto:aakashpatel7162@gmail.com">Or you can mail us directly <span class="highlight">here</span></a>
 </div>
 
    </form>
