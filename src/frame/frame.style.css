@@ -54,10 +54,7 @@
   align-self: flex-end;
   padding: 12px 18px;
   background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+
   transition: background-color 0.3s ease;
 }
 
