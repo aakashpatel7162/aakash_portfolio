@@ -14,10 +14,8 @@ h2 {
 form {
     max-width: 600px;
     margin: 0 auto;
-    background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
@@ -41,7 +39,10 @@ textarea {
 textarea {
     resize: vertical; /* Allows vertical resizing only */
 }
-
+.form-header{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 
 
 button:hover {
@@ -84,13 +85,6 @@ left:10%;
   text-indent: 0; /* Ensures no indenting for the first line */
 }
 
-.about-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
-  max-height: 100%;
-}
 
 .about-image img {
   width: auto; /* Adjust width automatically */
@@ -104,16 +98,98 @@ left:10%;
 .about-image img:hover {
   transform: scale(1.05); /* Enlarges the image on hover */
 }
+.about-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
+  
+}
+
+.contact_btn {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  padding: 11px 15px;
+  border-radius: 5px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.resume-btn {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+.contact-btn:hover, .resume-btn button:hover {
+  background-color: #005bb5;
+}
+
+.resume-btn {
+  text-decoration: none;
+}
+
+.social_icons {
+  display: flex;
+  gap: 15px;
+width: 40px;
+height: 40px;
+cursor: pointer;
+background-color: lightgray;  
+justify-content: center;
+align-items: center;
+border-radius: 8px;
+}
+
+.social_icon {
+  color: #333;
+  transition: color 0.3s;
+}
+
+.social_icon.linkedin:hover {
+  color: #0A66C8;
+}
+
+.social_icon.github:hover {
+  color: #333;
+}
+
   /*----expereince-----*/
   .experience-section {
     padding: 40px;
-    background-color: #343a40;
-        border-radius: 8px;
+    background-color: rgba(52, 58, 64, 0.35);        border-radius: 8px;
     max-width: 800px;
     margin: 20px auto; /* Centering the section */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  }
-  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  }  
   .experience-title {
     font-size: 28px;
     margin-bottom: 20px;
@@ -175,7 +251,7 @@ left:10%;
 .contact-form-container {
     max-width: 600px;
     margin: 40px auto;
-    padding: 30px;
+    padding: 20px;
     background: linear-gradient(145deg, #f3f3f3, #ffffff);
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -212,7 +288,6 @@ left:10%;
   
   /* Form group styling */
   .form-group {
-    margin-bottom: 20px;
     position: relative;
   }
   
@@ -294,10 +369,31 @@ left:10%;
 
   
   
-  .highlight:hover {
-    color: #c44532; /* Darker on hover */
-    border-bottom-color: #c44532; /* Darker underline on hover */
-  }
+  .connect-connecter {
+    border-radius: 8px;              /* Rounded corners */
+    text-align: center;              /* Center-align text */
+    max-width: 400px;                /* Limit width for better readability */
+    margin: 20px auto;               /* Center the div on the page */
+    font-family: Arial, sans-serif;  /* Clean font */
+    font-size: 16px;                 /* Readable font size */
+    color: #333;                     /* Darker color for text */
+}
+
+.connect-connecter a {
+    color: #0073e6;                  /* Primary color for link */
+    text-decoration: none;           /* Remove underline */
+    font-weight: bold;
+}
+
+.connect-connecter a:hover {
+    text-decoration: underline;      /* Underline on hover for clarity */
+}
+
+.highlight {
+    color: #ff6347;                  /* Highlight color for 'here' */
+    font-weight: bold;               /* Bold for emphasis */
+}
+
 /*-----overview----*/
 .circular-cards-container {
   position: relative;

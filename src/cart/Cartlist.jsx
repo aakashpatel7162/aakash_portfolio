@@ -5,9 +5,8 @@ import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import { FrameContext } from './FrameProvider'; // Ensure the context is imported correctly
 
 const CartList = ({ onClose }) => {
-
-    const [clickedItemId, setClickedItemId] = useState(null);
-    const { toggleFrame, setClickFrameIs } = useContext(FrameContext);  // Access the toggleFrame function from context
+  const [clickedItemId, setClickedItemId] = useState(null);
+  const { toggleFrame, setClickFrameIs, } = useContext(FrameContext); // Access the toggleFrame function from context
 
     const handleItemClick = (item) => {
         if (clickedItemId === item.id) {
@@ -44,7 +43,6 @@ const CartList = ({ onClose }) => {
  {item.icon}
                                 {/* <img src={item.img} alt={item.name} className="cart-item-image" /> */}
                                 <div className="cart-item-details">
-                                    <p className="cart-item-name">{item.name}</p>
                                     <p className="cart-item-type">{item.expertise}</p>
                                 </div>
                             </div>

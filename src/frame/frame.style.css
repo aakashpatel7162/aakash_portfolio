@@ -45,19 +45,16 @@
   color: #666;
 }
 
+.frame-skill-item::before {
+  color: #0056b3;
+  position: absolute;
+  left: 0;
+}
 .contact-btn {
   align-self: flex-end;
   padding: 12px 18px;
   background-color: #28a745;
-}
-button {
-  align-self: flex-start; /* Align button to the left */
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+
   transition: background-color 0.3s ease;
 }
 

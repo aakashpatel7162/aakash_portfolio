@@ -8,7 +8,6 @@ const Frame = () => {
   if (!frameVisible) {
     return null;
   }
-
   const currentCartItem=data.skillSets[clickFrameis-1]
  
   return (
@@ -18,18 +17,19 @@ const Frame = () => {
         <h5 className="frame-type">{currentCartItem.description}</h5>
 
         <div className="frame-skills">
-          <h6>Skills:</h6>
+          <h6>Feature:</h6>
           <ul>
-            {currentCartItem.skills?.map((skill, index) => (
+            {currentCartItem.strengths?.map((skill, index) => (
               <li key={index} className="frame-skill-item">{skill}</li>
             ))}
           </ul>
         </div>
 
+       
         <div className="frame-deepPoints">
-          <h6>Deep Points:</h6>
+          <span className="title">What we provide:</span>
           <ul>
-            {currentCartItem.deepPoints?.map((point, index) => (
+            {currentCartItem.offerings?.map((point, index) => (
               <li key={index} className="frame-deepPoint-item">{point}</li>
             ))}
           </ul>
@@ -37,8 +37,6 @@ const Frame = () => {
       </div>
       
       <button className='contact-btn' onClick={()=>window.scroll({top:2700, behavior:"smooth"})}>Contact with Expert</button>
-
-
     </div>
   );
 };
