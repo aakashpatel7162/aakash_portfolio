@@ -2,10 +2,6 @@ import React from "react";
 import data from "../constant/data";
 import './components.style.css'; // Import your CSS file
 import IMAGES from '../assets/images'
-import { SiGithub } from 'react-icons/si';
-import { AiFillLinkedin } from 'react-icons/ai'; 
-import { AiOutlineDownload } from 'react-icons/ai'; // Download icon
-
 const About = () => {
   const { aboutUsPage } = data;
 
@@ -22,22 +18,6 @@ const About = () => {
     </div>
     <div class="about-image">
         <img src={IMAGES.mySelf_image} alt="Your Name" />
-        <div className="buttons">
-      <button className="contact_btn">Contact Me</button>
-      <button className="resume-btn"href={IMAGES.my_resume} download='aakash_resume.pdf'>
-      <AiOutlineDownload  size={22}/> Resume
-    </button>
-      <a href="https://www.linkedin.com/in/aakash-patel-9b24531a2/" target="_blank" rel="noopener noreferrer"  className="social_icon" style={{color:"#0A66C8"}}>
-      
-        <AiFillLinkedin  size={25} />
-      </a>
-      <a href="https://github.com/aakashpatel7162" target="_blank" rel="noopener noreferrer " className="social_icon">
-      <SiGithub size={25} />
-      </a>
-    </div>
-  
-
-
     </div>
 </section>
 
