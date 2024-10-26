@@ -20,6 +20,7 @@
         <div className="content">
           <Outlet />
         </div>
+        <Footer />
       </div>
     </FrameProvider>
     );

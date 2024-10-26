@@ -2,10 +2,6 @@ import React from "react";
 import data from "../constant/data";
 import './components.style.css'; // Import your CSS file
 import IMAGES from '../assets/images'
-import { SiGithub } from 'react-icons/si';
-import { AiFillLinkedin } from 'react-icons/ai'; 
-import { AiOutlineDownload } from 'react-icons/ai'; // Download icon
-
 const About = () => {
   const { aboutUsPage } = data;
 
@@ -38,8 +34,6 @@ const About = () => {
       </a>
     </div>
   
-
-
     </div>
 </section>
 
