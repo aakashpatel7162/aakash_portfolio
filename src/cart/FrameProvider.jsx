@@ -6,7 +6,7 @@ export const FrameProvider = ({ children }) => {
   const [ frameVisible, setFrameVisible] = useState(false);
  const [clickFrameis, setClickFrameIs]=useState(null)
   const [contactInfo, setContactInfo] = useState(null);
-
+  
   const toggleFrame = (data) => {
     setFrameVisible(true); 
   };

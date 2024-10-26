@@ -10,6 +10,7 @@ const Experience = () => {
         {data.experienceData.map((item, index) => (
           <div className="experience-item" key={index}>
             <h3 className="experience-item-title">{item.role}</h3>
+            <div className="experience-item-org">{item.org}</div>
             <p className="experience-item-description">{item.description}</p>
           </div>
         ))}

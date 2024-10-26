@@ -17,6 +17,7 @@ export default function Main() {
         } else {
             setIsSlidingDown(false);
         }
+      window.scroll
     }, [frameVisible]);
 
     return (

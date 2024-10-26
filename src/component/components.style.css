@@ -135,7 +135,14 @@ left:10%;
     margin-bottom: 15px; /* Space between items */
     transition: box-shadow 0.3s; /* Smooth shadow transition */
   }
-  
+  .experience-item-org{
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left; 
+    left: 0;
+    position: relative;
+    left: 0%;
+  }
   .experience-item:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
   }
@@ -287,4 +294,85 @@ left:10%;
 
   
   
-  
+  .highlight:hover {
+    color: #c44532; /* Darker on hover */
+    border-bottom-color: #c44532; /* Darker underline on hover */
+  }
+/*-----overview----*/
+.circular-cards-container {
+  position: relative;
+  width: 480px; /* Increased width for stronger presence */
+  height: 420px; /* Increased height */
+  border-radius: 35px; /* Slightly more rounded for modern feel */
+  background: linear-gradient(145deg, #ffffff, #e3e9f0); /* Subtle gradient */
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.25); /* Enhanced shadow for depth */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 70px;
+  margin: 35px auto;
+}
+
+.card {
+  position: absolute;
+  width: 88%; /* Balanced size for aesthetic appeal */
+  height: 88%;
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #edf2f8; /* Lighter background for soft contrast */
+  border-radius: 22px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25); /* Deep shadow for stronger pop */
+  padding: 40px; /* Additional padding for content spacing */
+  text-align: center;
+  border: 2px solid #c5d0e0; /* Subtle border for structure */
+  transform: scale(0.94);
+}
+
+.card.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card h3 {
+  font-size: 2.4em; /* Larger title for emphasis */
+  font-weight: 800; /* Stronger emphasis */
+  color: #1a3b58; /* Darker, muted blue for readability */
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.card p {
+  font-size: 1.15em;
+  color: #5c6976;
+  line-height: 1.7; /* Improved readability */
+  padding: 0 30px;
+}
+
+.card:hover {
+  background-color: #bcd4f4; /* Distinctive highlight color on hover */
+  transform: scale(1.07); /* Slightly more scale-up on hover */
+  border: 2px solid #82b1ff; /* Accent color border on hover */
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3); /* Enhanced shadow for interaction feedback */
+}
+
+.card:hover h3 {
+  color: #005ca8; /* Brighter accent color for hover */
+}
+
+.circular-cards-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  background: rgba(240, 244, 248, 0.95); /* Higher opacity for stronger focus */
+  z-index: -1;
+  box-shadow: inset 0 10px 40px rgba(0, 0, 0, 0.2); /* Stronger inner shadow */
+}

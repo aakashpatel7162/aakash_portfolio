@@ -4,20 +4,13 @@ import './frame.style.css';
 import data from '../constant/data';
 
 const Frame = () => {
-  const { frameVisible, frameData, setContactInfo,clickFrameis } = useContext(FrameContext);
+  const { frameVisible,clickFrameis } = useContext(FrameContext);
   if (!frameVisible) {
     return null;
   }
 
   const currentCartItem=data.skillSets[clickFrameis-1]
-console.log(clickFrameis,"frma")
-  const handleContactMeClick = () => {
-    setContactInfo({
-      name: frameData.name,
-      type: frameData.type,
-    });
-  };
-
+ 
   return (
     <div className="frame-container">
       <div className="frame-content">
@@ -42,8 +35,10 @@ console.log(clickFrameis,"frma")
           </ul>
         </div>
       </div>
+      
+      <button className='contact-btn' onClick={()=>window.scroll({top:2700, behavior:"smooth"})}>Contact with Expert</button>
 
-      <button onClick={handleContactMeClick}>Contact me</button>
+
     </div>
   );
 };

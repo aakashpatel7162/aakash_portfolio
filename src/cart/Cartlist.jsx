@@ -5,6 +5,7 @@ import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import { FrameContext } from './FrameProvider'; // Ensure the context is imported correctly
 
 const CartList = ({ onClose }) => {
+
     const [clickedItemId, setClickedItemId] = useState(null);
     const { toggleFrame, setClickFrameIs } = useContext(FrameContext);  // Access the toggleFrame function from context
 

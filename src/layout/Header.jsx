@@ -98,7 +98,12 @@ export default function Header({ toggleSidebar, menuBar }) {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-        toggleSidebar();
+        setTimeout(()=>{
+          toggleSidebar();
+        },1000)
+        // toggleSidebar();
+
+        // setFrameVisible(false)
       }
     };
 
@@ -123,17 +128,15 @@ export default function Header({ toggleSidebar, menuBar }) {
         </div>
       )}
 
-      {/* Always render the logo and menu icon */}
       <div className="logo" onClick={toggleSidebar} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', marginRight: '5px' }}>
         <MenuOutlinedIcon style={{ color: 'white', marginRight: '5px' }} />
-        <img src={IMAGES.logo} alt="Logo" className="logo_image" style={{ height: '40px' }} />
+        <img src={IMAGES.logo} alt="Logo" className="logo_image" style={{ height: '40px', marginLeft:"8px" }} />
       </div>
 
       <div className="center_nav" style={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
         {data.header_list.map((text, index) => (
           <div key={index}          className={`nav_link ${activeIndex === index ? 'active' : ''}`} 
           
-          // Apply 'active' class conditionally
           onMouseOver={e => e.currentTarget.style.color = 'red'} onMouseOut={e => e.currentTarget.style.color = ''} onClick={()=>handleScroll(index)}>
             {text}
           </div>

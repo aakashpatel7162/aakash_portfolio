@@ -1,11 +1,12 @@
 import React, { useContext, useState, useEffect,useRef } from 'react';
 import { FrameContext } from '../cart/FrameProvider'; // Ensure FrameContext is imported
 import './components.style.css';
-
+import data from '../constant/data';
 export default function Contact() {
-  const { contactInfo } = useContext(FrameContext); // Access context data
+  const { contactInfo ,clickFrameis} = useContext(FrameContext); // Access context data
 
   // Single state object to manage all form fields
+    const currentDeveloper=data.expertList[clickFrameis-1]
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,13 +16,13 @@ export default function Contact() {
 
   // Pre-fill the subject if contactData exists from the FrameContext
   useEffect(() => {
-    if (contactInfo) {
+    if (clickFrameis) {
       setFormData((prevData) => ({
         ...prevData,
-        subject: `Inquiry about ${contactInfo.type} by ${contactInfo.name}`
+        subject: `Inquiry about ${currentDeveloper.expertise}`
       }));
     }
-  }, [contactInfo]);
+  }, [clickFrameis]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

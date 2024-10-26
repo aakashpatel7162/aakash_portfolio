@@ -45,6 +45,11 @@
   color: #666;
 }
 
+.contact-btn {
+  align-self: flex-end;
+  padding: 12px 18px;
+  background-color: #28a745;
+}
 button {
   align-self: flex-start; /* Align button to the left */
   padding: 8px 16px;
