@@ -1,16 +1,16 @@
 import React, { useState, useContext } from 'react';
-import './cart.style.css'; // Import the CSS file
+import './cart.style.css'; 
 import data from '../constant/data';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
-import { FrameContext } from './FrameProvider'; // Ensure the context is imported correctly
+import { FrameContext } from './FrameProvider'; 
 
 const CartList = ({ onClose }) => {
   const [clickedItemId, setClickedItemId] = useState(null);
-  const { toggleFrame, setClickFrameIs, } = useContext(FrameContext); // Access the toggleFrame function from context
+  const { toggleFrame, setClickFrameIs, } = useContext(FrameContext);
 
     const handleItemClick = (item) => {
         if (clickedItemId === item.id) {
-            setClickedItemId(null);  // Deselect
+            setClickedItemId(null);
         } else {
             toggleFrame({
               
@@ -41,7 +41,6 @@ const CartList = ({ onClose }) => {
                                 onClick={() => handleItemClick(item)}  // Trigger frame toggle
                             >
  {item.icon}
-                                {/* <img src={item.img} alt={item.name} className="cart-item-image" /> */}
                                 <div className="cart-item-details">
                                     <p className="cart-item-type">{item.expertise}</p>
                                 </div>
