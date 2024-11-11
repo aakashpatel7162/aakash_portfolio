@@ -1,6 +1,6 @@
 import React from "react";
-import data from "../constant/data"; // Import your experience data
-import './components.style.css'; // Import your CSS file
+import data from "../constant/data"; 
+import './components.style.css'; 
 
 const Experience = () => {
   return (

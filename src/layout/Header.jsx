@@ -86,7 +86,6 @@ export default function Header({ toggleSidebar, menuBar }) {
     });
   };
 
-  // Set up the scroll event listener
   useEffect(() => {
     window.addEventListener('scroll', handleScrollUpdate);
     return () => {
@@ -94,16 +93,13 @@ export default function Header({ toggleSidebar, menuBar }) {
     };
   }, [data.header_list]);
 
-  // Close sidebar when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
         setTimeout(()=>{
           toggleSidebar();
         },1000)
-        // toggleSidebar();
-
-        // setFrameVisible(false)
+     
       }
     };
 
@@ -124,7 +120,7 @@ export default function Header({ toggleSidebar, menuBar }) {
       
       {menuBar && (
         <div ref={sidebarRef}>
-          <CartList onClose={toggleSidebar} />  {/* Ensure this component works properly */}
+          <CartList onClose={toggleSidebar} />  
         </div>
       )}
 
